@@ -17,7 +17,7 @@ $put = doit::get_response();
 preg_match_all('/<dt><a title=".*?" target="_blank" href="(.*?)"><img title=/', $put, $matches);
 // var_dump($matches);
 
-$url = 'https://apkpure.com/id' . $matches[1][0] . '/download?from=details';
+$url = 'https://apkpure.com' . $matches[1][0] . '/download?from=details';
 
 doit::prepare($url, $query);
 doit::exec_get();
